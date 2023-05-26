@@ -16,11 +16,18 @@ export class Factura extends Entity {
   tipo: string;
 
   @property({
-    type: 'array',
-    itemType: 'string',
+    type: 'string',
     required: true,
   })
-  productos: string[];
+  nombre: string;
+  
+
+  @property({
+    type: 'array',
+    itemType: 'object',
+    required: true,
+  })
+  productos: object[];
 
   // Define well-known properties here
 
